@@ -68,7 +68,17 @@ const SongDetailPage = () => {
 
     const spotifyDownloadUrl = `https://spotidownloader.com/`;
 
-    window.open(spotifyDownloadUrl, "_blank");
+    navigator.clipboard.writeText(songDetails.external_urls.spotify)
+      .then(() => {
+          alert("Spotify link copied to clipboard!");
+          return new Promise(resolve => setTimeout(resolve, 2000));
+      })
+      .then(() => {
+          window.open(spotifyDownloadUrl, "_blank");
+      })
+      .catch((err) => {
+          console.error("Failed to copy link: ", err);
+      });
   }
 
   if (loading) {
