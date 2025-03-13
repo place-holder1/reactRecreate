@@ -1,0 +1,61 @@
+/* src/styles/searchCard.module.css */
+.searchCard {
+    position: absolute;
+    top: 60px;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: #181818;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    overflow-y: auto;
+    max-height: 400px;
+    margin-top: 0.5rem;
+  }
+  
+  .searchCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .searchCard li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
+  }
+  
+  .searchCard li:hover {
+    background-color: #333;
+  }
+  
+  .searchCard li img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+  
+  .searchCard li p {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .searchCard li:first-child {
+    border-top: 1px solid #333;
+  }
+  
+  .searchCard li:last-child {
+    border-bottom: none;
+  }
+  

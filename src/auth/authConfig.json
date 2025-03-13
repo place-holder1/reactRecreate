@@ -1,0 +1,6 @@
+{
+    "clientId": "804157474f014dcca574cfcbad3d7002",
+    "clientSecret" : "69796401823147a0812b61ff91e9f466",
+    "redirectUri": "http://localhost:5173/callback",
+    "scopes": "user-library-read playlist-read-private user-read-playback-state user-modify-playback-state"
+  }

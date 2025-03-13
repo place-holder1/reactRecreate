@@ -1,0 +1,80 @@
+.title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navItem {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navItem:hover {
+    color: #000;
+}
+
+.pageLayout {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.librarySection {
+    flex-basis: 250px;
+    flex-shrink: 0;
+}
+
+.featured {
+    flex-grow: 1;
+    padding: 20px;
+    background: #121212;
+    border-radius: 12px;
+    color: white;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    background: #181818;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #282828;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}

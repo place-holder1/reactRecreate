@@ -1,41 +1,37 @@
-import { useState } from 'react'
-import Wrapper from "./components/Wrapper"
-import Navbar from "./components/Navbar"
 // import Navbar from "./components/Navbar"
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import Navbar from "./components/Navbar"
 import './App.css'
+// import { getTokenFromResponse } from "./auth/auth";
+import { useContext } from "react";
+import HomePage from "./pages/HomePage";
+import FileInputPage from "./pages/FileInputPage";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import ModeContext from "./contexts/ModeContext"; 
+import SongDetailPage from "./pages/SongDetailPage";
 
-function App() {
-  const [count, setCount] = useState(0)
+<script
+  crossOrigin="anonymous"
+  src="//unpkg.com/react-scan/dist/auto.global.js"
+/>
+
+// const spotify = new SpotifyWebApi();
+
+const App = () => {
+  //const [count, setCount] = useState(0)
+  const { mode } = useContext(ModeContext);
 
   return (
-    <Wrapper>
-      {/* <Navbar/> */}
-      <h1>Hi</h1>
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-    </Wrapper>
+    // <AuthProvider>
+      <HashRouter>
+        <main className={mode === "light" ? "light" : "dark"}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/song/:songId" element={<SongDetailPage />} />
+            <Route path="/fileInputPage" element={<FileInputPage />} />
+          </Routes>
+        </main>
+      </HashRouter>
+    // </AuthProvider>
   )
 }
 

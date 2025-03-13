@@ -1,0 +1,29 @@
+.library {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #181818;
+    color: white;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  
+  .header {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  /* .header h2 {
+    font-size: 24px;
+  } */
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f3f3f3;
+  }
