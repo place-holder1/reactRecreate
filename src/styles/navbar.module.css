@@ -1,4 +1,4 @@
-/* Navbar */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -7,7 +7,7 @@
     background-color: #121212;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    position: relative; /* To make the search card relative to this container */
+    position: relative;
   }
   
   .navbar a {

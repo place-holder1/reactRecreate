@@ -4,8 +4,9 @@ import styles from "../styles/homepage.module.css";
 import Navbar from "../components/Navbar";
 import authConfig from "../auth/authConfig.json";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router-dom";
 import Library from "../components/LibrarySide";
+import SongPlayer from "../components/songPlayer"
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -63,7 +64,7 @@ const HomePage = () => {
           )}
         </section>
       </div>
-
+          <SongPlayer/>
       <Footer />
     </Wrapper>
   );

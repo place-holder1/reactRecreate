@@ -42,7 +42,8 @@ const FileInput = () => {
 
     try {
       // Add elijah-gill.com's database and fix it eventually
-      const response = await fetch("https://elijah-gill.com/phpdb/send-data.php", {
+      // const response = await fetch("https://elijah-gill.com/phpdb/send-data.php", {
+      const response = await fetch("https://web.ics.purdue.edu/~zong6/profile-app/send-data-with-id.php", {
         method: "POST",
         body: formData,
       });
